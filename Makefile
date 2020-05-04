@@ -17,11 +17,11 @@ build/action0.txt: | build
 	countdown 20
 	date > build/action0.txt
 
-build/action1.txt: | build
+build/action1.txt: build/action0.txt | build
 	countdown 21
 	date > build/action1.txt
 
-build/action2.txt: | build
+build/action2.txt: build/action1.txt | build
 	countdown 22
 	date > build/action2.txt
 
