@@ -4,7 +4,7 @@
 # 2. View the [Action0](build/action0.txt) file.
 # 3. View the [Action1](build/action1.txt) file.
 # 4. View the [Action2](build/action2.txt) file.
-# 5. Read the news at [CBC News](https://www.cbc.ca/news)
+# 5. Read today's news at [CBC News](https://www.cbc.ca/news)
 # 6. Clean up after yourself, man, what kind of place do you think this is?
 #     - [Clean](clean)
 
