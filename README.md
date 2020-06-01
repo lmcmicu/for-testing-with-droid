@@ -4,3 +4,4 @@ This README should eventually be filled in with useful information.
 But there isn't any now, sadly.
 Nor do I think there will ever be. That's also very sad.
 It's tragic, when you think about it. Really, it is.
+No, no, don't try to comfort me. I can't be cheered up.
