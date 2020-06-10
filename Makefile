@@ -1,4 +1,16 @@
 ### Workflow
+# Shuffle browser
+#
+# 1. Edit [mapping table](https://docs.google.com/spreadsheets/d/1IRAv5gKADr329kx2rJnJgtpYYqUhZcwLutKke8Q48j4/edit)
+# 2. [Update files](update)
+# 3. [View results](build/index.html)
+#
+# Demo browser:
+#
+# 1. [Update browser](browser)
+# 2. [View browser](build/browser/index.html)
+
+### OLD-Workflow
 #
 # 1. Run [Update](update)
 # 2. View the [Action0](build/action0.txt) file.
