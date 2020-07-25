@@ -20,34 +20,33 @@ update: build/action0.txt build/action1.txt build/action2.txt build/hobbit-scrip
 scripts: build/hobbit-script.py build/hobbit-script.sh orc-script.py
 
 build/action0.txt: | build
-	countdown 20
+	#countdown 20
 	date > build/action0.txt
 
 build/action1.txt: build/action0.txt | build
-	countdown 21
+	#countdown 21
 	date > build/action1.txt
 
 build/action2.txt: build/action1.txt | build
-	countdown 22
+	#countdown 22
 	date > build/action2.txt
 
 build/index.html: | build
 	echo "<html><h1>Hello!</h1></html>" > build/index.html
 
-orc-script.py: /home/mike/Knocean/droid/orc-script.py | build
-	cp /home/mike/Knocean/droid/orc-script.py .
+orc-script.py:
 	chmod u+x orc-script.py
 
-build/hobbit-script.py: /home/mike/Knocean/droid/hobbit-script.py | build
-	cp /home/mike/Knocean/droid/hobbit-script.py build/
+build/hobbit-script.py: | build
+	cp hobbit-script.py build/
 	chmod u+x build/hobbit-script.py
 
-build/hobbit-script.sh: /home/mike/Knocean/droid/hobbit-script.sh | build
-	cp /home/mike/Knocean/droid/hobbit-script.sh build/
+build/hobbit-script.sh: | build
+	cp hobbit-script.sh build/
 	chmod u+x build/hobbit-script.sh
 
 build:
 	mkdir -p $@
 
 clean:
-	rm -Rf build orc-script.py
+	rm -Rf build
