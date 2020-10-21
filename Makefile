@@ -20,15 +20,15 @@ update: build/action0.txt build/action1.txt build/action2.txt build/hobbit-scrip
 scripts: build/hobbit-script.py build/hobbit-script.sh orc-script.py
 
 build/action0.txt: | build
-	#countdown 20
+	countdown 20
 	date > build/action0.txt
 
 build/action1.txt: build/action0.txt | build
-	#countdown 21
+	countdown 21
 	date > build/action1.txt
 
 build/action2.txt: build/action1.txt | build
-	#countdown 22
+	countdown 22
 	date > build/action2.txt
 
 build/index.html: | build
