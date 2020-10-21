@@ -11,7 +11,14 @@
 # 5. Read the news at [CBC News](https://www.cbc.ca/news)
 # 6. Clean up
 #     - [Clean](clean)
-# 9. [Commit](git commit)
+# 1. [Make sure that everything is ok](git status)
+# 2. [See what's different](git diff)
+# 3. [Fetch a stick](git fetch)
+# 4. [Pull up your pants](git pull)
+# 9. [Don't be afraid to commit](git commit)
+# 10. [Amend it if you need to](git amend)
+# 11. [Push it to the repo](git push)
+# 12. [ANd what do we do now?](git nonsense)
 
 
 .PHONY: clean update scripts
