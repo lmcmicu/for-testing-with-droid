@@ -11,6 +11,7 @@
 # 5. Read the news at [CBC News](https://www.cbc.ca/news)
 # 6. Clean up
 #     - [Clean](clean)
+# 9. [Commit](git commit)
 
 
 .PHONY: clean update scripts
