@@ -21,6 +21,8 @@ scripts: build/hobbit-script.py build/hobbit-script.sh orc-script.py
 
 build/action0.txt: | build
 	#countdown 20
+	echo "sleeping for 60 seconds ..."
+	sleep 60
 	date > build/action0.txt
 
 build/action1.txt: build/action0.txt | build
