@@ -41,20 +41,12 @@ print("<HR></PRE>")
 
 input_data = cgi.FieldStorage()
 
-
-#print("Hello there: {}\n".format(input_data.keys()))
-#print("Hello there, thou! {}\n".format(input_data))
-
 if os.environ.get('REQUEST_METHOD') == "GET":
   print("Thanks for sending a GET with '{}'".format([input_data[key] for key in input_data.keys()]))
 else:
   print("Thanks for sending a {} with (among other things) '{}'\n".format(os.environ.get('REQUEST_METHOD'),
-                                                                          input_data['cgi-input-py'].value))
-
-#the_stuff = sys.stdin.read()
-#print(the_stuff)
-
-#for line in sys.stdin:
-#  print(format(unquote_plus(line)))
+                                                                          # This must match the form param
+                                                                          # that you send:
+                                                                          input_data['myfile'].value))
 
 sys.exit(0)
