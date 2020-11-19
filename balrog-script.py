@@ -32,31 +32,10 @@ print("<HR></PRE>")
 
 input_data = cgi.FieldStorage()
 
-
-
 if os.environ.get('REQUEST_METHOD') == "GET":
-  print("Thanks for sending a GET to me, an elf, with '{}'".format([input_data[key] for key in input_data.keys()]))
+  print("Thanks for sending a GET with '{}'".format([input_data[key] for key in input_data.keys()]))
 else:
-  print("You sent a {} to me, an elf, with (among other things) '{}'\n".format(os.environ.get('REQUEST_METHOD'),
-                                                                               input_data['cgi-input-py'].value))
-
-# print('''
-# <form action="hobbit-script.py" method="POST">
-#   <p>Share Goofle Sheet with submitter:</p>
-#   <input type="hidden" name="action" value="share">
-#   <input type="submit" value="Submit">
-# </form>
-# ''')
-
-print('''
-<p>
-  <form action="./hobbit-script.py" method="POST" enctype="multipart/form-data">
-    <label for="myfile">Select a file:</label>
-    <input type="file" id="myfile" name="myfile">
-    <input type="submit" value="Submit">
-  </form>
-</p>
-''')
-
+  print("Thanks for sending a {}!\n".format(os.environ.get('REQUEST_METHOD')))
+  print("You sent the parameters: {}".format(input_data))
 
 sys.exit(0)
