@@ -22,9 +22,10 @@ update: build/action0.txt build/action1.txt build/action2.txt scripts
 scripts: build/elf-script.py build/balrog-script.py build/hobbit-script.py build/hobbit-script.sh orc-script.py
 
 build/action0.txt: | build
-	#countdown 20
+	#./countdown 60
 	#echo "sleeping for 60 seconds ..."
-	#sleep 60
+	sleep 20
+	#cat foof
 	date > build/action0.txt
 
 build/action1.txt: build/action0.txt | build
