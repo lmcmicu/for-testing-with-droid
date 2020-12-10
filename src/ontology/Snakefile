@@ -20,7 +20,7 @@
 
 update: ../../build/../build/action0.txt ../../build/action1.txt ../../build/action2.txt scripts
 
-scripts: ../../build/elf-script.py ../../build/balrog-script.py ../../build/hobbit-script.py ../../build/hobbit-script.sh ../orc-script.py
+scripts: ../../build/elf-script.py ../../build/balrog-script.py ../../build/hobbit-script.py ../../build/hobbit-script.sh ../orc-script.py ../../build/orc-script.py
 
 ../../build/../build/action0.txt: | ../../build
 	echo "sleeping for 20 seconds ..."
