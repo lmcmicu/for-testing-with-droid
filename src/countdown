@@ -16,7 +16,6 @@ fi
 while [ $start -gt 0 ]
 do
 	echo $start
-	cat foof
 	start=`expr $start - 1`
 	sleep 1
 done
