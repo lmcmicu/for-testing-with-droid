@@ -41,20 +41,21 @@ print("<HR></PRE>")
 
 input_data = cgi.FieldStorage()
 
-
-#print("Hello there: {}\n".format(input_data.keys()))
-#print("Hello there, thou! {}\n".format(input_data))
+# if os.environ.get('REQUEST_METHOD') == "GET":
+#   print("Thanks for sending a GET with '{}'".format([input_data[key] for key in input_data.keys()]))
+# else:
+#   print("Thanks for sending a {} with (among other things) '{}'\n".format(os.environ.get('REQUEST_METHOD'),
+#                                                                           # This must match the form param
+#                                                                           # that you send:
+#                                                                           input_data['myfile'].value))
 
 if os.environ.get('REQUEST_METHOD') == "GET":
-  print("Thanks for sending a GET with '{}'".format([input_data[key] for key in input_data.keys()]))
+  print("Thanks for sending a GET you person, you, with '{}'".format([input_data[key] for key in input_data.keys()]))
 else:
-  print("Thanks for sending a {} with (among other things) '{}'\n".format(os.environ.get('REQUEST_METHOD'),
-                                                                          input_data['cgi-input-py'].value))
+  print("Thanks for sending a {}!\n".format(os.environ.get('REQUEST_METHOD')))
+  print("You sent the following parameters:")
+  for key in input_data:
+    print("<p>{}: {}</p>".format(key, input_data[key]))
 
-#the_stuff = sys.stdin.read()
-#print(the_stuff)
-
-#for line in sys.stdin:
-#  print(format(unquote_plus(line)))
 
 sys.exit(0)
