@@ -4,6 +4,7 @@
 # 2. View the [Action0](build/action0.txt) file.
 # 3. View the [Action1](build/action1.txt) file.
 # 4. View the [Action2](build/action2.txt) file.
+# 5. Look at the [Excel script](./build/excel.py)
 # 3. Get into the [Elf script](./build/elf-script.py)
 # 3. Have a gander at the [Balrog script](./build/balrog-script.py)
 # 5. Run the script [Orc script](./orc-script.py?cgi-input-py=degrassi)
@@ -19,12 +20,12 @@
 
 update: build/action0.txt build/action1.txt build/action2.txt scripts
 
-scripts: build/elf-script.py build/balrog-script.py build/hobbit-script.py build/hobbit-script.sh orc-script.py
+scripts: build/excel.py build/elf-script.py build/balrog-script.py build/hobbit-script.py build/hobbit-script.sh orc-script.py
 
 build/action0.txt: | build
 	#./countdown 60
 	#echo "sleeping for 60 seconds ..."
-	sleep 20
+	#./countdown 360
 	#cat foof
 	date > build/action0.txt
 
@@ -53,6 +54,10 @@ build/elf-script.py: elf-script.py | build
 build/balrog-script.py: balrog-script.py | build
 	cp balrog-script.py build/
 	chmod u+x build/balrog-script.py
+
+build/excel.py: excel.py | build
+	cp excel.py build/
+	chmod u+x build/excel.py
 
 build/hobbit-script.sh: hobbit-script.sh | build
 	cp hobbit-script.sh build/
