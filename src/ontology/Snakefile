@@ -66,4 +66,4 @@ scripts: ../../build/elf-script.py ../../build/balrog-script.py ../../build/hobb
 	mkdir -p $@
 
 clean:
-	rm -Rf ../../build
+	rm -Rf build
