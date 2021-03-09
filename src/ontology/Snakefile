@@ -1,20 +1,21 @@
 ### Workflow
 #
-# 1. Runs [Update](update)
-# 2. Have a look (heh heh) at this unaccessible [File](../../../../../../fit.log)
-# 2. View the [Action0](../../build/../build/action0.txt) file.
-# 3. View the [Action1](../../build/action1.txt) file.
-# 4. View the [Action2](../../build/action2.txt) file.
-# 3. Get into the [Elf script](./../../build/elf-script.py)
-# 3. Have a gander at the [Balrog script](./../../build/balrog-script.py)
-# 5. Run the script [Orc script](./../orc-script.py?cgi-input-py=degrassi)
-# 5. Run the OTHER [Orc script](./../../build/orc-script.py)
-# 5. Run the script [Hobbit-script (python version)](./../../build/hobbit-script.py?cgi-input-py=degrassi).
-# 5. Run the script [Hobbit-script (bash version)](./../../build/hobbit-script.sh?foo=barzork).
-# 6. Look in the [build](../../build/) directory.
+# 1. Run `make update` to pull in updates from afar
+# 2. Have a look (heh heh) at the inaccessible file: `../../../../../../fit.log`
+# 2. View the `../../build/../build/action0.txt` file.
+# 3. View the `../../build/action1.txt` file.
+# 4. View the `../../build/action2.txt` file.
+# 3. Get into the script: `./../../build/elf-script.py` (it's so awesome!)
+# 3. Have a gander at the `./../../build/balrog-script.py` (it's terrible to behold)
+# 5. Run the script `./../orc-script.py?cgi-input-py=degrassi` (the "orc" script)
+# 5. Now run the OTHER "orc" script: `./../../build/orc-script.py` (it's a little gentler than the first)
+# 5. Run the python version of the hobbit script: `./../../build/hobbit-script.py?cgi-input-py=degrassi`.
+# 5. Run the bash version of the hobbit script: `./../../build/hobbit-script.sh?foo=barzork`.
+# 6. Look in the `../../build/` directory.
 # 5. Read the news at [CBC News](https://www.cbc.ca/news)
-# 6. Clean up
-#     - [Clean](clean)
+# 6. Now that you've had some time to reflect on the state of the world, commit your code using `git commit` and all will be well.
+# 7. If you're really confident you might even want to `git push` your code to the remote repo!
+# 6. Don't forget to clean up by running `make clean`
 
 
 .PHONY: clean update scripts
