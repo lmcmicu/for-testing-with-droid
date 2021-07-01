@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# counts down from a specified integer.
+
+case $# in
+	0) echo "Usage: countdown <start>"
+	exit 1;;
+esac
+
+start=`expr $1 - 1`
+if [ $? -ne 0 ]
+then
+	exit 1
+fi
+
+while [ $start -gt 0 ]
+do
+	echo $start
+	git status
+	start=`expr $start - 1`
+	sleep 1
+done
+
+echo 0	# should always be zero at this point.
+exit 0
