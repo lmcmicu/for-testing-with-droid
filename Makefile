@@ -34,7 +34,7 @@ build/action1.txt: build/action0.txt | build
 	date > build/action1.txt
 
 build/action2.txt: build/action1.txt | build
-	#countdown 22
+	countdown 22
 	date > build/action2.txt
 
 build/index.html: | build
