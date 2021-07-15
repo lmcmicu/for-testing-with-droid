@@ -16,7 +16,7 @@ fi
 while [ $start -gt 0 ]
 do
 	echo $start
-	git status
+	# git status
 	start=`expr $start - 1`
 	sleep 1
 done
