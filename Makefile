@@ -7,7 +7,7 @@
 # 5. Look at the [Excel script](./build/excel.py)
 # 3. Get into the [Elf script](./build/elf-script.py)
 # 3. Have a gander at the [Balrog script](./build/balrog-script.py)
-# 5. Run the script [Orc script](./orc-script.py?cgi-input-py=degrassi)
+# 5. Run the script [Orc script](./build/orc-script.py?cgi-input-py=degrassi)
 # 5. Run the script [Hobbit-script (python version)](./build/hobbit-script.py?cgi-input-py=degrassi).
 # 5. Run the script [Hobbit-script (bash version)](./build/hobbit-script.sh?foo=barzork).
 # 6. Look in the [build](build/) directory.
@@ -40,8 +40,9 @@ build/action2.txt: build/action1.txt | build
 build/index.html: | build
 	echo "<html><h1>Hello!</h1></html>" > build/index.html
 
-orc-script.py:
-	chmod u+x orc-script.py
+build/orc-script.py: orc-script.py | build
+	cp orc-script.py build/
+	chmod u+x build/orc-script.py
 
 build/hobbit-script.py: hobbit-script.py | build
 	cp hobbit-script.py build/

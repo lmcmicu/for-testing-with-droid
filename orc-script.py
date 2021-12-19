@@ -47,6 +47,7 @@ input_data = cgi.FieldStorage()
 
 if os.environ.get('REQUEST_METHOD') == "GET":
   print("Thanks for sending a GET to me, an orc, with '{}'".format([input_data[key] for key in input_data.keys()]))
+  print("PATH_INFO: {}".format(os.environ.get('PATH_INFO')))
 else:
   print("You sent a {} to me, an orc, with (among other things) '{}'\n".format(os.environ.get('REQUEST_METHOD'),
                                                                                input_data['cgi-input-py'].value))
